@@ -3,6 +3,7 @@ export default {
   authDomain: "fir-clone-6edcd.firebaseapp.com",
   databaseURL: "https://fir-clone-6edcd.firebaseio.com",
   projectId: "fir-clone-6edcd",
-  storageBucket: "",
-  messagingSenderId: "995566111510"
+  storageBucket: "fir-clone-6edcd.appspot.com",
+  messagingSenderId: "995566111510",
+  appId: "1:995566111510:web:bca92b45890b8772"
 };

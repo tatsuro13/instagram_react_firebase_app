@@ -18,10 +18,10 @@ const styles = theme => ({
     flexGrow: 1
   },
   button: {
-    margin: theme.spacing.unit
+    margin: theme.spacing()
   },
   rightIcon: {
-    marginLeft: theme.spacing.unit
+    marginLeft: theme.spacing()
   },
   avatar: {
     margin: 10,

@@ -10,9 +10,9 @@ class App extends Component {
 
     // Initialize Firebase
     firebase.initializeApp(config);
-    firebase.firestore().settings({
-      timestampsInSnapshots: true
-    });
+    // firebase.firestore().settings({
+    //   timestampsInSnapshots: true
+    // });
   }
 
   render() {
