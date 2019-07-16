@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from "react-router-dom"
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -18,15 +19,19 @@ const styles = theme => ({
     flexGrow: 1
   },
   button: {
-    margin: theme.spacing()
+    margin: theme.spacing().unit
   },
   rightIcon: {
-    marginLeft: theme.spacing()
+    marginLeft: theme.spacing().unit
   },
   avatar: {
     margin: 10,
     backgroundColor: "white"
-  }
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+  },
 });
 
 class Header extends Component {
@@ -101,6 +106,10 @@ class Header extends Component {
         >
           Sign Out
         </Button>
+        <Button variant="contained" color="default">
+          <Link to="/upload" className={classes.link}>Upload</Link>
+          <CloudUploadIcon className={classes.rightIcon} />
+        </Button>
       </div>
     );
   };
@@ -115,7 +124,7 @@ class Header extends Component {
               color="inherit"
               className={classes.flex}
             >
-              Firebase Videos
+              <Link to="/" className={classes.link}>Firebase Videos</Link>
             </Typography>
             {this.state.isLogin
               ? this.renderLoginedComponent(classes)

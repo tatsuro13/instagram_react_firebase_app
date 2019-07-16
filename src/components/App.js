@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import firebase from "firebase/app";
 import "firebase/firestore";
 import config from "../config/firebase-config";
 import Header from "./Header";
+import VideoUpload from "./VideoUpload";
 
 class App extends Component {
   constructor() {
@@ -17,9 +19,14 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <Router>
+      <div className="App">
         <Header />
+        <Switch>
+          <Route path="/upload" component={VideoUpload} />
+        </Switch>
       </div>
+      </Router>
     );
   }
 }
